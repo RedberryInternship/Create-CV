@@ -17,28 +17,25 @@ class User extends Authenticatable
      *
      * @var array<int, string>
      */
-    protected $fillable = [
-        'name',
-        'email',
-        'password',
-    ];
+    protected $guarded = ['id'];
 
-    /**
-     * The attributes that should be hidden for serialization.
-     *
-     * @var array<int, string>
-     */
-    protected $hidden = [
-        'password',
-        'remember_token',
-    ];
+    public function country()
+    {
+        return $this->belongsTo(Country::class);
+    }
 
-    /**
-     * The attributes that should be cast.
-     *
-     * @var array<string, string>
-     */
-    protected $casts = [
-        'email_verified_at' => 'datetime',
-    ];
+    public function experiences()
+	{
+		return $this->belongsToMany(Experience::class, 'user_experiences', 'user_id', 'experience_id');
+	}
+
+    public function educations()
+	{
+		return $this->belongsToMany(Experience::class, 'user_educations', 'user_id', 'education_id');
+	}
+
+    public function skills()
+	{
+		return $this->belongsToMany(Experience::class, 'user_skills', 'user_id', 'skill_id');
+	}
 }

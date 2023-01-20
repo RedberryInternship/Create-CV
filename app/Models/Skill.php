@@ -10,4 +10,9 @@ class Skill extends Model
     use HasFactory;
 
     protected $guarded = ['id'];
+
+    public function users()
+	{
+		return $this->belongsToMany(User::class, 'user_skills', 'skill_id', 'user_id', );
+	}
 }
