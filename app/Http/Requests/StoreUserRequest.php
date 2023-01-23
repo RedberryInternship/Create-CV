@@ -15,7 +15,7 @@ class StoreUserRequest extends FormRequest
 	public function rules()
 	{
 		return [
-			'token'                    => 'required|string',
+			'token'                    => ['required', 'exists:tokens,token'],
 			'name'                     => 'required|min:2',
 			'surname'                  => 'required|min:2',
 			'email'                    => 'required|email',

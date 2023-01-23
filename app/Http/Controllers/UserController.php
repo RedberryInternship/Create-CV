@@ -2,38 +2,49 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\GetUsersRequest;
 use App\Http\Requests\StoreUserRequest;
 use App\Http\Resources\UserResource;
 use App\Models\Education;
 use App\Models\Experience;
 use App\Models\Skill;
+use App\Models\Token;
 use App\Models\User;
 use App\Models\UserEducation;
 use App\Models\UserExperience;
 use App\Models\UserSkill;
 use Illuminate\Http\JsonResponse;
-use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 
 class UserController extends Controller
 {
-	public function index(Request $request): JsonResponse
+	public function index(GetUsersRequest $request): JsonResponse
 	{
-		$users = User::where('token', $request->token)->get();
+		$token = Token::where('token', $request->token)->firstOrFail();
+		$users = User::where('token', $token->id)->get();
 		return response()->json(UserResource::collection($users), 200);
 	}
 
 	public function get(User $user): JsonResponse
 	{
-		return response()->json(UserResource::make($user), 200);
+		if (!$user)
+		{
+			return response()->json('No Results Found', 404);
+		}
+		else
+		{
+			return response()->json(UserResource::make($user), 200);
+		}
 	}
 
 	public function store(StoreUserRequest $request): JsonResponse
 	{
 		$user = DB::transaction(
 			function () use ($request) {
+				$token = Token::where('token', $request->token)->first();
 				$user = User::create($request->validated() + [
-					'image' => $request->file('image')->store('images'),
+					'image'   => '/storage/' . $request->file('image')->store('images'),
+					'token_id'=> $token->id,
 				]);
 				foreach ($request->experiences as $experience)
 				{
@@ -74,9 +85,9 @@ class UserController extends Controller
 						'skill_id' => $newSkill->id,
 					]);
 				}
-				return $user;
+				return ['message' => 'Information recorded', 'data' => UserResource::make($user)];
 			}
 		);
-		return response()->json(UserResource::make($user), 201);
+		return response()->json($user, 201);
 	}
 }
