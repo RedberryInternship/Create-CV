@@ -32,7 +32,7 @@ class StoreUserRequest extends FormRequest
             'educations.*.degree_id'   =>['required', 'numeric', Rule::exists('degrees', 'id')],
             'educations.*.due_date'    =>'required|date',
             'educations.*.description' =>'required',
-            'image'                   =>'required|string',
+            'image'                   =>'required|image',
             'about_me'                =>'nullable|string',
             'skills.*.title'          =>'required|string',
             'english_lang'            =>'required|numeric',

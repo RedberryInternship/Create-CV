@@ -49,23 +49,19 @@ paths:
                 type: array
                 items:
                   type: string
-
-  /cvs/{token}:
+  /cvs:
     post:
       summary: Stores data.
-      parameters:
-        - name: "token"
-          in: "query"
-          description: "Token"
-          required: true
-          type: "string"
       requestBody:
         description: Create a new contact organization
         content:
-          application/json:
+          multipart/form-data:
             schema:
               type: object
               properties:
+                token:
+                  type: string
+                  example: 6d527477c2e405a686d8426964940876
                 name:
                   type: string
                   example: დავით
@@ -122,8 +118,9 @@ paths:
                         type: text
                         example: სამართლის ფაკულტეტის მიზანი იყო მიგვეღო ფართო თეორიული ცოდნა სამართლის არსის, სისტემის, ძირითადი პრინციპების, სამართლებრივი სისტემების, ქართული სამართლის ისტორიული წყაროების, კერძო, სისხლის და საჯარო სამართლის სფეროების ძირითადი თეორიების, პრინციპებისა და რეგულირების თავისებურებების შესახებ.
                 image:
-                  type: string
-                  example: myimage.png
+                  type: file
+                  format: binary
+                  example: image-name.png
                 about_me:
                   type: text
                   example: ეს არის აღწერა ჩემს შესახებ
@@ -148,6 +145,111 @@ paths:
                   type: date
                   example: 1995/09/18
               required:
+                - token
+                - name
+                - surname
+                - email
+                - phone_number
+                - country_id
+                - city
+                - experiences
+                - educations
+                - image
+                - skills
+                - english_lang
+                - georgian_lang
+
+          application/json:
+            schema:
+              type: object
+              properties:
+                token:
+                  type: string
+                  example: 6d527477c2e405a686d8426964940876
+                name:
+                  type: string
+                  example: დავით
+                surname:
+                  type: string
+                  example: ონიანი
+                email:
+                  type: email
+                  example: davitoniani@redberry.ge
+                phone_number:
+                  type: string
+                  example: 995598123456
+                country_id:
+                  type: integer
+                  example: 80
+                city:
+                  type: string
+                  example: Tbilisi
+                experiences:
+                  type: array
+                  items:
+                    type: object
+                    properties:
+                      position:
+                        type: string
+                        example: back-end developer
+                      employer:
+                        type: string
+                        example: Redberry
+                      start_date:
+                        type: date
+                        example: 2019/09/09
+                      due_date:
+                        type: date
+                        example: 2020/09/23
+                      description:
+                        type: text
+                        example: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam ornare nunc dui, a pellentesque magna blandit dapibus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum mattis diam nisi, at venenatis dolor aliquet vel. Pellentesque aliquet leo nec tortor pharetra, ac consectetur orci bibendum.
+                educations:
+                  type: array
+                  items:
+                    type: object
+                    properties:
+                      institute:
+                        type: string
+                        example: თსუ
+                      degree_id:
+                        type: integer
+                        example: 13
+                      due_date:
+                        type: date
+                        example: 2017/06/25
+                      description:
+                        type: text
+                        example: სამართლის ფაკულტეტის მიზანი იყო მიგვეღო ფართო თეორიული ცოდნა სამართლის არსის, სისტემის, ძირითადი პრინციპების, სამართლებრივი სისტემების, ქართული სამართლის ისტორიული წყაროების, კერძო, სისხლის და საჯარო სამართლის სფეროების ძირითადი თეორიების, პრინციპებისა და რეგულირების თავისებურებების შესახებ.
+                image:
+                  type: file
+                  format: binary
+                  example: image-name.png
+                about_me:
+                  type: text
+                  example: ეს არის აღწერა ჩემს შესახებ
+                skills:
+                  type: array
+                  items:
+                    type: object
+                    properties:
+                      title:
+                        type: string
+                        example: PHP
+                english_lang:
+                  type: integer
+                  example: 4
+                georgian_lang:
+                  type: integer
+                  example: 5
+                marital_status:
+                  type: string
+                  example: დასაოჯახებელი
+                birth_date:
+                  type: date
+                  example: 1995/09/18
+              required:
+                - token
                 - name
                 - surname
                 - email

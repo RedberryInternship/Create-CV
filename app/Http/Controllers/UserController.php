@@ -21,9 +21,10 @@ use Illuminate\Support\Facades\DB;
 
 class UserController extends Controller
 {
-    public function index() : JsonResponse
+    public function index(Request $request) : JsonResponse
     {
-        return response()->json(UserResource::collection(User::all()), 200);
+        $users = User::where('token', $request->token)->get();
+        return response()->json(UserResource::collection($users), 200);
     }
 
     public function get(User $user) : JsonResponse
@@ -35,8 +36,9 @@ class UserController extends Controller
     {
         $user = DB::transaction(
 			function () use ($request) {
-                $user = User::create($request->validated());
-
+                $user = User::create($request->validated() + [
+                    'image' => $request->file('image')->store('images')
+                ]);
                 foreach($request->experiences as $experience){
                     $newExperience = Experience::create([
                         'position' => $experience['position'],
