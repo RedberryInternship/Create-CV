@@ -19,6 +19,7 @@ return new class extends Migration
             $table->string('name');
             $table->string('surname');
             $table->string('email');
+            $table->string('phone_number');
             $table->foreignId('country_id');
             $table->string('city');
             $table->string('image');

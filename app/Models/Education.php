@@ -18,6 +18,6 @@ class Education extends Model
 
     public function users()
 	{
-		return $this->belongsToMany(User::class, 'user_educations', 'education_id', 'user_id', );
+		return $this->belongsToMany(User::class, 'user_education', 'education_id', 'user_id', );
 	}
 }

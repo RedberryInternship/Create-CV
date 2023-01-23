@@ -31,11 +31,11 @@ class User extends Authenticatable
 
     public function educations()
 	{
-		return $this->belongsToMany(Experience::class, 'user_educations', 'user_id', 'education_id');
+		return $this->belongsToMany(Experience::class, 'user_education', 'user_id', 'education_id');
 	}
 
     public function skills()
 	{
-		return $this->belongsToMany(Experience::class, 'user_skills', 'user_id', 'skill_id');
+		return $this->belongsToMany(Skill::class, 'user_skills', 'user_id', 'skill_id');
 	}
 }
