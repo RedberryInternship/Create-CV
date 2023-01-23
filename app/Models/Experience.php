@@ -7,11 +7,11 @@ use Illuminate\Database\Eloquent\Model;
 
 class Experience extends Model
 {
-    use HasFactory;
+	use HasFactory;
 
-    protected $guarded = ['id'];
+	protected $guarded = ['id'];
 
-    public function users()
+	public function users()
 	{
 		return $this->belongsToMany(User::class, 'user_experiences', 'experience_id', 'user_id', );
 	}

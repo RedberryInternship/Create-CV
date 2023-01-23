@@ -7,7 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class UserEducation extends Model
 {
-    use HasFactory;
+	use HasFactory;
 
-    protected $guarded = ['id'];
+	protected $guarded = ['id'];
 }

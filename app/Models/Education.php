@@ -7,16 +7,16 @@ use Illuminate\Database\Eloquent\Model;
 
 class Education extends Model
 {
-    use HasFactory;
+	use HasFactory;
 
-    protected $guarded = ['id'];
+	protected $guarded = ['id'];
 
-    public function degree()
-    {
-        return $this->belongsTo(Degree::class);
-    }
+	public function degree()
+	{
+		return $this->belongsTo(Degree::class);
+	}
 
-    public function users()
+	public function users()
 	{
 		return $this->belongsToMany(User::class, 'user_education', 'education_id', 'user_id', );
 	}

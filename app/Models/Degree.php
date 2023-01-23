@@ -7,12 +7,12 @@ use Illuminate\Database\Eloquent\Model;
 
 class Degree extends Model
 {
-    use HasFactory;
+	use HasFactory;
 
-    protected $guarded = ['id'];
+	protected $guarded = ['id'];
 
-    public function educations()
-    {
-        return $this->hasMany(Education::class);
-    }
+	public function educations()
+	{
+		return $this->hasMany(Education::class);
+	}
 }
