@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\TokenController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -13,6 +14,12 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+Route::view('swagger', 'swagger')->name('swagger');
+
 Route::get('/', function () {
-	return view('swagger');
+	return view('token', [
+		'token' => '',
+	]);
 });
+
+Route::post('/', [TokenController::class, 'generate_token']);
