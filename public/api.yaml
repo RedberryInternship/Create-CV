@@ -20,9 +20,7 @@ paths:
           content:
             application/json:
               schema:
-                type: array
-                items:
-                  type: string
+                $ref: "../swagger/examples/countries.yaml#/components/schemas"
 
   /cities:
     get:
@@ -33,9 +31,7 @@ paths:
           content:
             application/json:
               schema:
-                type: array
-                items:
-                  type: string
+                $ref: "../swagger/examples/cities.yaml#/components/schemas"
 
   /degrees:
     get:
@@ -46,9 +42,8 @@ paths:
           content:
             application/json:
               schema:
-                type: array
-                items:
-                  type: string
+                $ref: "../swagger/examples/degrees.yaml#/components/schemas"
+
   /cvs:
     post:
       summary: Stores data.
@@ -268,9 +263,7 @@ paths:
           content:
             application/json:
               schema:
-                type: array
-                items:
-                  type: string
+                $ref: "../swagger/examples/cv.yaml#/components/schemas"
 
     get:
       summary: Returns a list of degrees.
@@ -305,6 +298,4 @@ paths:
           content:
             application/json:
               schema:
-                type: array
-                items:
-                  type: string
+                $ref: "../swagger/examples/cv.yaml#/components/schemas"

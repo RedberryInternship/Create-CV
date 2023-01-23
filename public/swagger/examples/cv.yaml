@@ -1,0 +1,37 @@
+components:
+  schemas:
+    example:
+      token: 6d527477c2e405a686d8426964940876
+      name: დავით
+      surname: ონიანი
+      email: davitoniani@redberry.ge
+      phone_number: "995598123456"
+      country_id: 80
+      city: Tbilisi
+      experiences:
+        - position: back-end developer
+          employer: Redberry
+          start_date: 2019/09/09
+          due_date: 2020/09/23
+          description:
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam ornare
+            nunc dui, a pellentesque magna blandit dapibus. Lorem ipsum dolor sit amet, consectetur
+            adipiscing elit. Vestibulum mattis diam nisi, at venenatis dolor aliquet vel.
+            Pellentesque aliquet leo nec tortor pharetra, ac consectetur orci bibendum.
+      educations:
+        - institute: თსუ
+          degree_id: 13
+          due_date: 2017/06/25
+          description:
+            სამართლის ფაკულტეტის მიზანი იყო მიგვეღო ფართო თეორიული ცოდნა სამართლის
+            არსის, სისტემის, ძირითადი პრინციპების, სამართლებრივი სისტემების, ქართული სამართლის
+            ისტორიული წყაროების, კერძო, სისხლის და საჯარო სამართლის სფეროების ძირითადი თეორიების,
+            პრინციპებისა და რეგულირების თავისებურებების შესახებ.
+      image: image-name.png
+      about_me: ეს არის აღწერა ჩემს შესახებ
+      skills:
+        - title: PHP
+      english_lang: 4
+      georgian_lang: 5
+      marital_status: დასაოჯახებელი
+      birth_date: 1995/09/18
