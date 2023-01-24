@@ -16,14 +16,14 @@ class StoreUserRequest extends FormRequest
 	{
 		return [
 			'token'                    => ['required', 'exists:tokens,token'],
-			'name'                     => 'required|min:2',
-			'surname'                  => 'required|min:2',
-			'email'                    => 'required|email',
-			'phone_number'             => 'required|numeric',
+			'name'                     => ['required', 'min:2', 'regex:/^[ა-ჰ]$/'],
+			'surname'                  => ['required', 'min:2', 'regex:/^[ა-ჰ]$/'],
+			'email'                    => ['required', 'email', 'ends_with:@redberry.ge'],
+			'phone_number'             => ['required', 'starts_with:+995', 'max:13', 'min:13'],
 			'country_id'               => ['required', 'numeric', Rule::exists('countries', 'id')],
-			'city'                     => 'required|string',
+			'city'                     => ['required', 'min:2', 'regex:/^[ა-ჰa-zA-Z]$/'],
 			'experiences.*.position'   => 'required|string|min:2',
-			'experiences.*.employer'   => 'required|string|min:2',
+			'experiences.*.employer'   => ['required', 'min:2', 'regex:/^[ა-ჰa-zA-Z0-9!@#$%^&*()_+= ]+$/'],
 			'experiences.*.start_date' => 'required|date',
 			'experiences.*.due_date'   => 'required|date',
 			'experiences.*.description'=> 'required',
@@ -34,9 +34,9 @@ class StoreUserRequest extends FormRequest
 			'image'                    => 'required|image',
 			'about_me'                 => 'nullable|string',
 			'skills.*.title'           => 'required|string',
-			'english_lang'             => 'required|numeric',
-			'georgian_lang'            => 'required|numeric',
-			'marital_status'           => 'nullable|string',
+			'english_lang'             => ['required', 'numeric', 'in:1,2,3,4,5'],
+			'georgian_lang'            => ['required', 'numeric', 'in:1,2,3,4,5'],
+			'marital_status'           => ['required', 'numeric', 'in:დაოჯახებული,დასაოჯახებელი'],
 			'birth_date'               => 'nullable|date',
 		];
 	}
