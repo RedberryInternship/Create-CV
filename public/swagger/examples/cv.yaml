@@ -5,7 +5,7 @@ components:
       name: დავით
       surname: ონიანი
       email: davitoniani@redberry.ge
-      phone_number: "995598123456"
+      phone_number: "+995598123456"
       country_id: 80
       city: Tbilisi
       experiences:

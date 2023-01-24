@@ -21,30 +21,35 @@ class UserController extends Controller
 	public function index(GetUsersRequest $request): JsonResponse
 	{
 		$token = Token::where('token', $request->token)->firstOrFail();
-		$users = User::where('token', $token->id)->get();
+		$users = User::where('token_id', $token->id)->get();
 		return response()->json(UserResource::collection($users), 200);
 	}
 
 	public function get(User $user): JsonResponse
 	{
-		if (!$user)
-		{
-			return response()->json('No Results Found', 404);
-		}
-		else
-		{
-			return response()->json(UserResource::make($user), 200);
-		}
+		return response()->json(UserResource::make($user), 200);
 	}
 
 	public function store(StoreUserRequest $request): JsonResponse
 	{
-		$user = DB::transaction(
+		$data = DB::transaction(
 			function () use ($request) {
 				$token = Token::where('token', $request->token)->first();
-				$user = User::create($request->validated() + [
-					'image'   => '/storage/' . $request->file('image')->store('images'),
-					'token_id'=> $token->id,
+				$image = $request->file('image')->store('images');
+				$user = User::create([
+					'image'                    => '/storage/' . $image,
+					'token_id'                 => $token->id,
+					'name'                     => $request->name,
+					'surname'                  => $request->surname,
+					'email'                    => $request->email,
+					'phone_number'             => $request->phone_number,
+					'country_id'               => $request->country_id,
+					'city'                     => $request->city,
+					'about_me'                 => $request->about_me,
+					'english_lang'             => $request->english_lang,
+					'georgian_lang'            => $request->georgian_lang,
+					'marital_status'           => $request->marital_status,
+					'birth_date'               => $request->birth_date,
 				]);
 				foreach ($request->experiences as $experience)
 				{
@@ -85,9 +90,9 @@ class UserController extends Controller
 						'skill_id' => $newSkill->id,
 					]);
 				}
-				return ['message' => 'Information recorded', 'data' => UserResource::make($user)];
+				return ['message' => 'Information recorded'];
 			}
 		);
-		return response()->json($user, 201);
+		return response()->json($data, 201);
 	}
 }
