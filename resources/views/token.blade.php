@@ -24,12 +24,12 @@
             specs</a>
         @if ($token)
             <div class="mt-8 max-w-3xl bg-white p-6 dark:bg-gray-800 overflow-hidden shadow sm:rounded-lg w-full">
-                <div " class="flex justify-between items-center"><span id="token">{{ $token }}</span>
+                <div class="flex justify-between items-center"><span id="token">{{ $token }}</span>
                     <button
                         id="copy-button"
                         class="flex items-center relative justify-center transition-all duration-200 ease-in-out w-20 h-10 rounded-lg  border  border-green-400">
                         <span id="copy-text" class="absolute transition-all duration-150 ease-in-out">Copy</span>
-                        <span id="copied-text" class="opacity-0 text-gray-400 transition-all duration-150 ease-in-out absolute">Copied</span>
+                        <span id="copied-text" class="opacity-0 text-white transition-all duration-150 ease-in-out absolute">Copied</span>
                     </button>
                 </div>
             </div>
