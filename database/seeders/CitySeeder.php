@@ -2,8 +2,9 @@
 
 namespace Database\Seeders;
 
+use App\Models\City;
 use Illuminate\Database\Seeder;
-use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Storage;
 
 class CitySeeder extends Seeder
 {
@@ -14,68 +15,12 @@ class CitySeeder extends Seeder
 	 */
 	public function run()
 	{
-		$cities = [
-			'თბილისი',
-			'ბათუმი',
-			'ქუთაისი',
-			'რუსთავი',
-			'გორი',
-			'ზუგდიდი',
-			'ფოთი',
-			'ხაშური',
-			'სამტრედია',
-			'სენაკი',
-			'ზესტაფონი',
-			'მარნეული',
-			'თელავი',
-			'ახალციხე',
-			'ქობულეთი',
-			'ოზურგეთი',
-			'კასპი',
-			'ჭიათურა',
-			'წყალტუბო',
-			'საგარეჯო',
-			'გარდაბანი',
-			'ბორჯომი',
-			'ტყიბული',
-			'ხონი',
-			'ბოლნისი',
-			'ახალქალაქი',
-			'გურჯაანი',
-			'მცხეთა',
-			'ყვარელი',
-			'ახმეტა',
-			'ქარელი',
-			'ლანჩხუთი',
-			'დუშეთი',
-			'საჩხერე',
-			'დედოფლისწყარო',
-			'ლაგოდეხი',
-			'ნინოწმინდა',
-			'აბაშა',
-			'წნორი',
-			'თერჯოლა',
-			'მარტვილი',
-			'ხობი',
-			'წალენჯიხა',
-			'ვანი',
-			'ბაღდათი',
-			'ვალე',
-			'ჩხოროწყუ',
-			'თეთრიწყარო',
-			'დმანისი',
-			'ონი',
-			'წალკა',
-			'ამბროლაური',
-			'სიღნაღი',
-			'ცაგერი',
-			'ჯვარი',
-		];
-
+		$json = Storage::get('/json/georgian-cities.json');
+		$cities = json_decode($json, true);
 		foreach ($cities as $city)
 		{
-			DB::table('cities')->insert([
-				'name' => $city,
+			City::create([
+				'name'   => $city['name'],
 			]);
 		}
 	}
