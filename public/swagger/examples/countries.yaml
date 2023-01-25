@@ -2,488 +2,452 @@ components:
   schemas:
     example:
       - id: 1
-        name: Afghanistan
+        name: ავსტრალია
       - id: 2
-        name: Åland Islands
+        name: ავსტრია
       - id: 3
-        name: Albania
+        name: ავღანეთი
       - id: 4
-        name: Algeria
+        name: აზერბაიჯანი
       - id: 5
-        name: American Samoa
+        name: ალანდის კუნძულები
       - id: 6
-        name: AndorrA
+        name: ალბანეთი
       - id: 7
-        name: Angola
+        name: ალჟირი
       - id: 8
-        name: Anguilla
+        name: ამერიკის სამოა
       - id: 9
-        name: Antarctica
+        name: ანგილა
       - id: 10
-        name: Antigua and Barbuda
+        name: ანგოლა
       - id: 11
-        name: Argentina
+        name: ანდორა
       - id: 12
-        name: Armenia
+        name: ანტარქტიდა
       - id: 13
-        name: Aruba
+        name: ანტიგუა და ბარბუდა
       - id: 14
-        name: Australia
+        name: არაბთა გაერთიანებული საამიროები
       - id: 15
-        name: Austria
+        name: არგენტინა
       - id: 16
-        name: Azerbaijan
+        name: არუბა
       - id: 17
-        name: Bahamas
+        name: ახალი ზელანდია
       - id: 18
-        name: Bahrain
+        name: ახალი კალედონია
       - id: 19
-        name: Bangladesh
+        name: ბანგლადეში
       - id: 20
-        name: Barbados
+        name: ბარბადოსი
       - id: 21
-        name: Belarus
+        name: ბაჰამის კუნძულები
       - id: 22
-        name: Belgium
+        name: ბაჰრეინი
       - id: 23
-        name: Belize
+        name: ბელგია
       - id: 24
-        name: Benin
+        name: ბელიზი
       - id: 25
-        name: Bermuda
+        name: ბელორუსია
       - id: 26
-        name: Bhutan
+        name: ბენინი
       - id: 27
-        name: Bolivia
+        name: ბერმუდის
       - id: 28
-        name: Bosnia and Herzegovina
+        name: ბოლივია
       - id: 29
-        name: Botswana
+        name: ბოსნია და ჰერცოგოვინა
       - id: 30
-        name: Bouvet Island
+        name: ბოტსვანა
       - id: 31
-        name: Brazil
+        name: ბრაზილია
       - id: 32
-        name: British Indian Ocean Territory
+        name: ბრიტანეთის ტერიტორია ინდოეთის ოკეანეში
       - id: 33
-        name: Brunei Darussalam
+        name: ბრუნეი დარუსალამი
       - id: 34
-        name: Bulgaria
+        name: ბუვეს კუნძული
       - id: 35
-        name: Burkina Faso
+        name: ბულგარეთი
       - id: 36
-        name: Burundi
+        name: ბურკინა ფასო
       - id: 37
-        name: Cambodia
+        name: ბურუნდი
       - id: 38
-        name: Cameroon
+        name: ბუტანი
       - id: 39
-        name: Canada
+        name: გაბონი
       - id: 40
-        name: Cape Verde
+        name: გაერთიანებული სამეფო
       - id: 41
-        name: Cayman Islands
+        name: გაიანა
       - id: 42
-        name: Central African Republic
+        name: გამბია
       - id: 43
-        name: Chad
+        name: განა
       - id: 44
-        name: Chile
+        name: გერმანია
       - id: 45
-        name: China
+        name: გერნსი
       - id: 46
-        name: Christmas Island
+        name: გვადელუპე
       - id: 47
-        name: Cocos (Keeling) Islands
+        name: გვატემალა
       - id: 48
-        name: Colombia
+        name: გვინეა
       - id: 49
-        name: Comoros
+        name: გვინეა-ბისაუ
       - id: 50
-        name: Congo
+        name: გიბრალტარი
       - id: 51
-        name: Congo, The Democratic Republic of the
+        name: გრენადა
       - id: 52
-        name: Cook Islands
+        name: გრენლანდია
       - id: 53
-        name: Costa Rica
+        name: გუამი
       - id: 54
-        name: Cote D'Ivoire
+        name: დანია
       - id: 55
-        name: Croatia
+        name: დასავლეთ საჰარა
       - id: 56
-        name: Cuba
+        name: დომინიკა
       - id: 57
-        name: Cyprus
+        name: დომინიკის რესპუბლიკა
       - id: 58
-        name: Czech Republic
+        name: ეგვიპტე
       - id: 59
-        name: Denmark
+        name: ეთიოპია
       - id: 60
-        name: Djibouti
+        name: ეკვადორი
       - id: 61
-        name: Dominica
+        name: ეკვატორული გვინეა
       - id: 62
-        name: Dominican Republic
+        name: ელ სალვადორი
       - id: 63
-        name: Ecuador
+        name: ერაყი
       - id: 64
-        name: Egypt
+        name: ერიტრეა
       - id: 65
-        name: El Salvador
+        name: ესპანეთი
       - id: 66
-        name: Equatorial Guinea
+        name: ესტონეთი
       - id: 67
-        name: Eritrea
+        name: ვანუატუ
       - id: 68
-        name: Estonia
+        name: ვენესუელა
       - id: 69
-        name: Ethiopia
+        name: ვიეტნამი
       - id: 70
-        name: Falkland Islands (Malvinas)
+        name: ვირჯინიის კუნძულები, აშშ.
       - id: 71
-        name: Faroe Islands
+        name: ვირჯინიის კუნძულები, ბრიტანეთი
       - id: 72
-        name: Fiji
+        name: ზამბია
       - id: 73
-        name: Finland
+        name: ზიმბაბვე
       - id: 74
-        name: France
+        name: თურქეთი
       - id: 75
-        name: French Guiana
+        name: თურქმენეთი
       - id: 76
-        name: French Polynesia
+        name: იამაიკა
       - id: 77
-        name: French Southern Territories
+        name: იაპონია
       - id: 78
-        name: Gabon
+        name: იემენი
       - id: 79
-        name: Gambia
+        name: ინდოეთი
       - id: 80
-        name: Georgia
+        name: ინდონეზია
       - id: 81
-        name: Germany
+        name: იორდანია
       - id: 82
-        name: Ghana
+        name: ირანი
       - id: 83
-        name: Gibraltar
+        name: ირლანდია
       - id: 84
-        name: Greece
+        name: ისლანდია
       - id: 85
-        name: Greenland
+        name: ისრაელი
       - id: 86
-        name: Grenada
+        name: იტალია
       - id: 87
-        name: Guadeloupe
+        name: კაბო ვერდე
       - id: 88
-        name: Guam
+        name: კაიმანის კუნძულები
       - id: 89
-        name: Guatemala
+        name: კამბოჯა
       - id: 90
-        name: Guernsey
+        name: კამერუნი
       - id: 91
-        name: Guinea
+        name: კანადა
       - id: 92
-        name: Guinea-Bissau
+        name: კენია
       - id: 93
-        name: Guyana
+        name: კვიპროსი
       - id: 94
-        name: Haiti
+        name: კირიბატი
       - id: 95
-        name: Heard Island and Mcdonald Islands
+        name: კოკოს (კილინგის) კუნძულები
       - id: 96
-        name: Holy See (Vatican City State)
+        name: კოლუმბია
       - id: 97
-        name: Honduras
+        name: კომორის კუნძულები
       - id: 98
-        name: Hong Kong
+        name: კონგო
       - id: 99
-        name: Hungary
+        name: კორეა
       - id: 100
-        name: Iceland
+        name: კოსტა - რიკა
       - id: 101
-        name: India
+        name: კოტ-დივუარი
       - id: 102
-        name: Indonesia
+        name: კუბა
       - id: 103
-        name: Iran, Islamic Republic Of
+        name: კუკის კუნძულები
       - id: 104
-        name: Iraq
+        name: ლაოს სახალხო დემოკრატიული რესპუბლიკა
       - id: 105
-        name: Ireland
+        name: ლატვია
       - id: 106
-        name: Isle of Man
+        name: ლესოტო
       - id: 107
-        name: Israel
+        name: ლიბანი
       - id: 108
-        name: Italy
+        name: ლიბერია
       - id: 109
-        name: Jamaica
+        name: ლიტვა
       - id: 110
-        name: Japan
+        name: ლიხტენშტეინი
       - id: 111
-        name: Jersey
+        name: ლუქსემბურგი
       - id: 112
-        name: Jordan
+        name: მადაგასკარი
       - id: 113
-        name: Kazakhstan
+        name: მავრიკი
       - id: 114
-        name: Kenya
+        name: მავრიტანია
       - id: 115
-        name: Kiribati
+        name: მაიოტი
       - id: 116
-        name: Korea, Democratic People'S Republic of
+        name: მაკაო
       - id: 117
-        name: Korea, Republic of
+        name: მაკედონია
       - id: 118
-        name: Kuwait
+        name: მალავი
       - id: 119
-        name: Kyrgyzstan
+        name: მალაიზია
       - id: 120
-        name: Lao People'S Democratic Republic
+        name: მალდივები
       - id: 121
-        name: Latvia
+        name: მალი
       - id: 122
-        name: Lebanon
+        name: მალტა
       - id: 123
-        name: Lesotho
+        name: მაროკო
       - id: 124
-        name: Liberia
+        name: მარტინიკი
       - id: 125
-        name: Libyan Arab Jamahiriya
+        name: მარშალის კუნძულები
       - id: 126
-        name: Liechtenstein
+        name: მენის კუნძული
       - id: 127
-        name: Lithuania
+        name: მექსიკა
       - id: 128
-        name: Luxembourg
+        name: მიანმარი
       - id: 129
-        name: Macao
+        name: მიკრონეზია
       - id: 130
-        name: Macedonia, The Former Yugoslav Republic of
+        name: მოზამბიკი
       - id: 131
-        name: Madagascar
+        name: მოლდოვა
       - id: 132
-        name: Malawi
+        name: მონაკო
       - id: 133
-        name: Malaysia
+        name: მონსერატი
       - id: 134
-        name: Maldives
+        name: მონღოლეთი
       - id: 135
-        name: Mali
+        name: ნამიბია
       - id: 136
-        name: Malta
+        name: ნაურუ
       - id: 137
-        name: Marshall Islands
+        name: ნეპალი
       - id: 138
-        name: Martinique
+        name: ნიგერია
       - id: 139
-        name: Mauritania
+        name: ნიდერლანდები
       - id: 140
-        name: Mauritius
+        name: ნიდერლანდების ანტილები
       - id: 141
-        name: Mayotte
+        name: ნიკარაგუა
       - id: 142
-        name: Mexico
+        name: ნიუე
       - id: 143
-        name: Micronesia, Federated States of
+        name: ნორვეგია
       - id: 144
-        name: Moldova, Republic of
+        name: ნორფოლკის კუნძული
       - id: 145
-        name: Monaco
+        name: ომანი
       - id: 146
-        name: Mongolia
+        name: პაკისტანი
       - id: 147
-        name: Montserrat
+        name: პალაუ
       - id: 148
-        name: Morocco
+        name: პალესტინის ტერიტორია, ოკუპირებული
       - id: 149
-        name: Mozambique
+        name: პანამა
       - id: 150
-        name: Myanmar
+        name: პაპუა ახალი გვინეა
       - id: 151
-        name: Namibia
+        name: პარაგვაი
       - id: 152
-        name: Nauru
+        name: პერუ
       - id: 153
-        name: Nepal
+        name: პიტკერნი
       - id: 154
-        name: Netherlands
+        name: პოლონეთი
       - id: 155
-        name: Netherlands Antilles
+        name: პორტუგალია
       - id: 156
-        name: New Caledonia
+        name: პუერტო რიკო
       - id: 157
-        name: New Zealand
+        name: რუანდა
       - id: 158
-        name: Nicaragua
+        name: რუმინეთი
       - id: 159
-        name: Niger
+        name: რუსეთის ფედერაცია
       - id: 160
-        name: Nigeria
+        name: საბერძნეთი
       - id: 161
-        name: Niue
+        name: სამოა
       - id: 162
-        name: Norfolk Island
+        name: სამხრეთ აფრიკა
       - id: 163
-        name: Northern Mariana Islands
+        name: სან მარინო
       - id: 164
-        name: Norway
+        name: სან-ტომე და პრინსიპი
       - id: 165
-        name: Oman
+        name: საუდის არაბეთი
       - id: 166
-        name: Pakistan
+        name: საფრანგეთი
       - id: 167
-        name: Palau
+        name: საფრანგეთის სამხრეთ ტერიტორიები
       - id: 168
-        name: Palestinian Territory, Occupied
+        name: საქართველო
       - id: 169
-        name: Panama
+        name: სეიშელის კუნძულები
       - id: 170
-        name: Papua New Guinea
+        name: სენეგალი
       - id: 171
-        name: Paraguay
+        name: სერბეთი და მონტენეგრო
       - id: 172
-        name: Peru
+        name: სიერა ლეონე
       - id: 173
-        name: Philippines
+        name: სინგაპური
       - id: 174
-        name: Pitcairn
+        name: სირიის არაბული რესპუბლიკა
       - id: 175
-        name: Poland
+        name: სლოვაკეთი
       - id: 176
-        name: Portugal
+        name: სლოვენია
       - id: 177
-        name: Puerto Rico
+        name: სოლომონის კუნძულები
       - id: 178
-        name: Qatar
+        name: სომალი
       - id: 179
-        name: Reunion
+        name: სომხეთი
       - id: 180
-        name: Romania
+        name: სუდანი
       - id: 181
-        name: Russian Federation
+        name: სურინამი
       - id: 182
-        name: RWANDA
+        name: ტაივანი, ჩინეთის პროვინცია
       - id: 183
-        name: Saint Helena
+        name: ტაილანდი
       - id: 184
-        name: Saint Kitts and Nevis
+        name: ტანზანია
       - id: 185
-        name: Saint Lucia
+        name: ტაჯიკეთი
       - id: 186
-        name: Saint Pierre and Miquelon
+        name: ტიმორ-ლესტე
       - id: 187
-        name: Saint Vincent and the Grenadines
+        name: ტოკელაუ
       - id: 188
-        name: Samoa
+        name: ტონგა
       - id: 189
-        name: San Marino
+        name: ტრინიდადი და ტობაგო
       - id: 190
-        name: Sao Tome and Principe
+        name: ტუვალუ
       - id: 191
-        name: Saudi Arabia
+        name: ტუნისი
       - id: 192
-        name: Senegal
+        name: უგანდა
       - id: 193
-        name: Serbia and Montenegro
+        name: უზბეკეთი
       - id: 194
-        name: Seychelles
+        name: უკრაინა
       - id: 195
-        name: Sierra Leone
+        name: უნგრეთი
       - id: 196
-        name: Singapore
+        name: ურუგვაი
       - id: 197
-        name: Slovakia
+        name: ფარერის კუნძულები
       - id: 198
-        name: Slovenia
+        name: ფილიპინები
       - id: 199
-        name: Solomon Islands
+        name: ფინეთი
       - id: 200
-        name: Somalia
+        name: ფიჯი
       - id: 201
-        name: South Africa
+        name: ფოლკლენდის კუნძულები (მალვინები)
       - id: 202
-        name: South Georgia and the South Sandwich Islands
+        name: ფრანგული გუიანა
       - id: 203
-        name: Spain
+        name: ფრანგული პოლინეზია
       - id: 204
-        name: Sri Lanka
+        name: ქუვეითი
       - id: 205
-        name: Sudan
+        name: ყაზახეთი
       - id: 206
-        name: Suriname
+        name: ყატარი
       - id: 207
-        name: Svalbard and Jan Mayen
+        name: ყირგიზეთი
       - id: 208
-        name: Swaziland
+        name: შეერთებული შტატები
       - id: 209
-        name: Sweden
+        name: შვედეთი
       - id: 210
-        name: Switzerland
+        name: შვეიცარია
       - id: 211
-        name: Syrian Arab Republic
+        name: შობის კუნძული
       - id: 212
-        name: Taiwan, Province of China
+        name: შრი ლანკა
       - id: 213
-        name: Tajikistan
+        name: ჩადი
       - id: 214
-        name: Tanzania, United Republic of
+        name: ჩეხეთის რესპუბლიკა
       - id: 215
-        name: Thailand
+        name: ჩილე
       - id: 216
-        name: Timor-Leste
+        name: ჩინეთი
       - id: 217
-        name: Togo
+        name: ჩრდილოეთ მარიანის კუნძულები
       - id: 218
-        name: Tokelau
+        name: ცენტრალური აფრიკის რესპუბლიკა
       - id: 219
-        name: Tonga
+        name: ხორვატია
       - id: 220
-        name: Trinidad and Tobago
+        name: ჯერსი
       - id: 221
-        name: Tunisia
+        name: ჯიბუტი
       - id: 222
-        name: Turkey
+        name: ჰაიტი
       - id: 223
-        name: Turkmenistan
+        name: ჰერდი და მაკდონალდის კუნძულები
       - id: 224
-        name: Turks and Caicos Islands
+        name: ჰონგ კონგი
       - id: 225
-        name: Tuvalu
-      - id: 226
-        name: Uganda
-      - id: 227
-        name: Ukraine
-      - id: 228
-        name: United Arab Emirates
-      - id: 229
-        name: United Kingdom
-      - id: 230
-        name: United States
-      - id: 231
-        name: United States Minor Outlying Islands
-      - id: 232
-        name: Uruguay
-      - id: 233
-        name: Uzbekistan
-      - id: 234
-        name: Vanuatu
-      - id: 235
-        name: Venezuela
-      - id: 236
-        name: Viet Nam
-      - id: 237
-        name: Virgin Islands, British
-      - id: 238
-        name: Virgin Islands, U.S.
-      - id: 239
-        name: Wallis and Futuna
-      - id: 240
-        name: Western Sahara
-      - id: 241
-        name: Yemen
-      - id: 242
-        name: Zambia
-      - id: 243
-        name: Zimbabwe
+        name: ჰონდურასი
