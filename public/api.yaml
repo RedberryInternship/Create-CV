@@ -267,11 +267,12 @@ paths:
               example:
                 message: Information recorded
 
+  /cvs/{token}:
     get:
-      summary: Returns a list of degrees.
+      summary: Returns a list of cvs.
       parameters:
         - name: "token"
-          in: "query"
+          in: "path"
           description: "unique token chosen for your user"
           required: true
           type: "string"
@@ -283,10 +284,15 @@ paths:
               schema:
                 $ref: "../swagger/examples/cvs.yaml#/components/schemas"
 
-  /cv/{id}:
+  /cv/{token}/{id}:
     get:
-      summary: Returns a list of degrees.
+      summary: Returns a specifix cv.
       parameters:
+        - name: "token"
+          in: "path"
+          description: "token"
+          required: true
+          type: "string"
         - name: "id"
           in: "path"
           description: "id of the cv"

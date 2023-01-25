@@ -27,7 +27,7 @@ Route::get('/cities', [CityController::class, 'index']);
 Route::get('/degrees', [DegreeController::class, 'index']);
 
 Route::controller(UserController::class)->group(function () {
-	Route::get('/cvs', 'index');
-	Route::get('/cv/{user:id}', 'get');
+	Route::get('/cvs/{token:token}', 'index');
+	Route::get('/cv/{token:token}/{id}', 'get');
 	Route::post('/cvs', 'store');
 });

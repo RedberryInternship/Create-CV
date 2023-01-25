@@ -2,7 +2,6 @@
 
 namespace App\Http\Controllers;
 
-use App\Http\Requests\GetUsersRequest;
 use App\Http\Requests\StoreUserRequest;
 use App\Http\Resources\UserResource;
 use App\Models\Education;
@@ -18,15 +17,14 @@ use Illuminate\Support\Facades\DB;
 
 class UserController extends Controller
 {
-	public function index(GetUsersRequest $request): JsonResponse
+	public function index(Token $token): JsonResponse
 	{
-		$token = Token::where('token', $request->token)->firstOrFail();
-		$users = User::where('token_id', $token->id)->get();
-		return response()->json(UserResource::collection($users), 200);
+		return response()->json(UserResource::collection($token->users), 200);
 	}
 
-	public function get(User $user): JsonResponse
+	public function get(Token $token, int $id): JsonResponse
 	{
+		$user = User::where([['token_id', $token->id], ['key', $id]])->first();
 		return response()->json(UserResource::make($user), 200);
 	}
 

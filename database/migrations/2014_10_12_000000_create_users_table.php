@@ -15,6 +15,7 @@ return new class() extends Migration {
 		Schema::create('users', function (Blueprint $table) {
 			$table->id();
 			$table->foreignId('token_id');
+			$table->integer('key');
 			$table->string('name');
 			$table->string('surname');
 			$table->string('email');
