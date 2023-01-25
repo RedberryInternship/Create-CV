@@ -23,6 +23,11 @@ class User extends Authenticatable
 	 */
 	protected $guarded = ['id'];
 
+	public function token()
+	{
+		return $this->belongsTo(Token::class);
+	}
+
 	public function country()
 	{
 		return $this->belongsTo(Country::class);
