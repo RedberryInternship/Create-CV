@@ -30,7 +30,6 @@ class UserResource extends JsonResource
 			'skills'                  => SkillResource::collection($this->skills),
 			'english_lang'            => $this->english_lang,
 			'georgian_lang'           => $this->georgian_lang,
-			'birth_date'              => $this->birth_date,
 		];
 	}
 }

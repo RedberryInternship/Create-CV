@@ -133,9 +133,6 @@ paths:
                 georgian_lang:
                   type: integer
                   example: 5
-                birth_date:
-                  type: date
-                  example: 1995/09/18
               required:
                 - token
                 - name
@@ -234,9 +231,6 @@ paths:
                 georgian_lang:
                   type: integer
                   example: 5
-                birth_date:
-                  type: date
-                  example: 1995/09/18
               required:
                 - token
                 - name

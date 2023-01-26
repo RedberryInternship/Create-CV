@@ -26,7 +26,6 @@ return new class() extends Migration {
 			$table->text('about_me')->nullable();
 			$table->tinyInteger('english_lang');
 			$table->tinyInteger('georgian_lang');
-			$table->date('birth_date')->nullable();
 			$table->rememberToken();
 			$table->timestamps();
 		});
