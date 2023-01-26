@@ -46,7 +46,6 @@ class UserController extends Controller
 					'about_me'                 => $request->about_me,
 					'english_lang'             => $request->english_lang,
 					'georgian_lang'            => $request->georgian_lang,
-					'marital_status'           => $request->marital_status,
 					'birth_date'               => $request->birth_date,
 				]);
 				foreach ($request->experiences as $experience)

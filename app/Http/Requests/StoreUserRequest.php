@@ -36,7 +36,6 @@ class StoreUserRequest extends FormRequest
 			'skills.*.title'           => 'required|string',
 			'english_lang'             => ['required', 'numeric', 'in:1,2,3,4,5'],
 			'georgian_lang'            => ['required', 'numeric', 'in:1,2,3,4,5'],
-			'marital_status'           => ['required', 'string', 'in:დაოჯახებული,დასაოჯახებელი'],
 			'birth_date'               => 'nullable|date',
 		];
 	}

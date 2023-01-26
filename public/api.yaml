@@ -133,9 +133,6 @@ paths:
                 georgian_lang:
                   type: integer
                   example: 5
-                marital_status:
-                  type: string
-                  example: დასაოჯახებელი
                 birth_date:
                   type: date
                   example: 1995/09/18
@@ -237,9 +234,6 @@ paths:
                 georgian_lang:
                   type: integer
                   example: 5
-                marital_status:
-                  type: string
-                  example: დასაოჯახებელი
                 birth_date:
                   type: date
                   example: 1995/09/18
