@@ -6,12 +6,10 @@ use App\Http\Requests\StoreUserRequest;
 use App\Http\Resources\UserResource;
 use App\Models\Education;
 use App\Models\Experience;
-use App\Models\Skill;
 use App\Models\Token;
 use App\Models\User;
 use App\Models\UserEducation;
 use App\Models\UserExperience;
-use App\Models\UserSkill;
 use Illuminate\Http\JsonResponse;
 use Illuminate\Support\Facades\DB;
 
@@ -46,6 +44,7 @@ class UserController extends Controller
 					'about_me'                 => $request->about_me,
 					'english_lang'             => $request->english_lang,
 					'georgian_lang'            => $request->georgian_lang,
+					'skills'                   => $request->skills,
 				]);
 				foreach ($request->experiences as $experience)
 				{
@@ -76,16 +75,6 @@ class UserController extends Controller
 					]);
 				}
 
-				foreach ($request->skills as $skill)
-				{
-					$newSkill = Skill::create([
-						'title' => $skill['title'],
-					]);
-					UserSkill::create([
-						'user_id'  => $user->id,
-						'skill_id' => $newSkill->id,
-					]);
-				}
 				return ['message' => 'Information recorded'];
 			}
 		);

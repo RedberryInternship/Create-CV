@@ -120,13 +120,8 @@ paths:
                   type: text
                   example: ეს არის აღწერა ჩემს შესახებ
                 skills:
-                  type: array
-                  items:
-                    type: object
-                    properties:
-                      title:
-                        type: string
-                        example: PHP
+                  type: string
+                  example: ხატვა, ძერწვა
                 english_lang:
                   type: integer
                   example: 4
@@ -140,10 +135,10 @@ paths:
                 - email
                 - phone_number
                 - country_id
+                - image
                 - city
                 - experiences
                 - educations
-                - image
                 - skills
                 - english_lang
                 - georgian_lang
@@ -218,13 +213,8 @@ paths:
                   type: text
                   example: ეს არის აღწერა ჩემს შესახებ
                 skills:
-                  type: array
-                  items:
-                    type: object
-                    properties:
-                      title:
-                        type: string
-                        example: PHP
+                  type: string
+                  example: ხატვა, ძერწვა
                 english_lang:
                   type: integer
                   example: 4
@@ -238,10 +228,10 @@ paths:
                 - email
                 - phone_number
                 - country_id
+                - image
                 - city
                 - experiences
                 - educations
-                - image
                 - skills
                 - english_lang
                 - georgian_lang

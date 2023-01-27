@@ -23,11 +23,11 @@ class UserResource extends JsonResource
 			'phone_number'            => $this->phone_number,
 			'country'                 => CountryResource::make($this->country),
 			'city'                    => $this->city,
+			'about_me'                => $this->about_me,
 			'experiences'             => ExperienceResource::collection($this->experiences),
 			'educations'              => EducationResource::collection($this->educations),
 			'image'                   => $this->image,
-			'about_me'                => $this->about_me,
-			'skills'                  => SkillResource::collection($this->skills),
+			'skills'                  => $this->skills,
 			'english_lang'            => $this->english_lang,
 			'georgian_lang'           => $this->georgian_lang,
 		];
