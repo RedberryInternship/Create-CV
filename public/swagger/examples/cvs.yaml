@@ -6,8 +6,8 @@ components:
         surname: ონიანი
         email: davitoniani@redberry.ge
         phone_number: "+995598123456"
-        country_id: 80
-        city: Tbilisi
+        country: საქართველო
+        city: თბილისი
         experiences:
           - position: back-end developer
             employer: Redberry

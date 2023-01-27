@@ -74,7 +74,7 @@ paths:
                   example: 80
                 city:
                   type: string
-                  example: Tbilisi
+                  example: თბილისი
                 experiences:
                   type: array
                   items:
@@ -167,7 +167,7 @@ paths:
                   example: 80
                 city:
                   type: string
-                  example: Tbilisi
+                  example: თბილისი
                 experiences:
                   type: array
                   items:
