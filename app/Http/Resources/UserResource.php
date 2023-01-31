@@ -21,15 +21,10 @@ class UserResource extends JsonResource
 			'surname'                 => $this->surname,
 			'email'                   => $this->email,
 			'phone_number'            => $this->phone_number,
-			'country'                 => CountryResource::make($this->country)->name,
-			'city'                    => $this->city,
 			'about_me'                => $this->about_me,
 			'experiences'             => ExperienceResource::collection($this->experiences),
 			'educations'              => EducationResource::collection($this->educations),
 			'image'                   => $this->image,
-			'skills'                  => $this->skills,
-			'english_lang'            => $this->english_lang,
-			'georgian_lang'           => $this->georgian_lang,
 		];
 	}
 }

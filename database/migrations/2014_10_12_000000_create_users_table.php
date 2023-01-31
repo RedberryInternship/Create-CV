@@ -20,13 +20,8 @@ return new class() extends Migration {
 			$table->string('surname');
 			$table->string('email');
 			$table->string('phone_number');
-			$table->foreignId('country_id');
-			$table->string('city');
 			$table->string('image');
 			$table->text('about_me')->nullable();
-			$table->tinyInteger('english_lang');
-			$table->tinyInteger('georgian_lang');
-			$table->text('skills');
 			$table->rememberToken();
 			$table->timestamps();
 		});

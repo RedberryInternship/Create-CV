@@ -20,8 +20,6 @@ class StoreUserRequest extends FormRequest
 			'surname'                  => ['required', 'min:2', 'regex:/^[ა-ჰ]{0,999}$/'],
 			'email'                    => ['required', 'email', 'ends_with:@redberry.ge'],
 			'phone_number'             => ['required', 'starts_with:+995', 'max:13', 'min:13'],
-			'country_id'               => ['required', 'numeric', Rule::exists('countries', 'id')],
-			'city'                     => ['required', 'min:2', 'regex:/^[ა-ჰa-zA-Z]{0,999}$/'],
 			'about_me'                 => 'nullable|string',
 			'experiences.*.position'   => 'required|string|min:2',
 			'experiences.*.employer'   => ['required', 'min:2', 'regex:/^[ა-ჰa-zA-Z0-9!@#$%^&*()_+= ]+$/'],
@@ -33,9 +31,6 @@ class StoreUserRequest extends FormRequest
 			'educations.*.due_date'    => 'required|date',
 			'educations.*.description' => 'required',
 			'image'                    => 'required|image',
-			'skills'                   => 'required|string',
-			'english_lang'             => ['required', 'numeric', 'in:1,2,3,4,5'],
-			'georgian_lang'            => ['required', 'numeric', 'in:1,2,3,4,5'],
 		];
 	}
 }

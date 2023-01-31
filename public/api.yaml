@@ -11,28 +11,6 @@ servers:
     description: production server
 
 paths:
-  /countries:
-    get:
-      summary: Returns a list of countries.
-      responses:
-        "200":
-          description: A JSON array of user names
-          content:
-            application/json:
-              schema:
-                $ref: "../swagger/examples/countries.yaml#/components/schemas"
-
-  /cities:
-    get:
-      summary: Returns a list of cities in Georgia.
-      responses:
-        "200":
-          description: A JSON array of user names
-          content:
-            application/json:
-              schema:
-                $ref: "../swagger/examples/cities.yaml#/components/schemas"
-
   /degrees:
     get:
       summary: Returns a list of degrees.
@@ -69,12 +47,6 @@ paths:
                 phone_number:
                   type: string
                   example: +995598123456
-                country_id:
-                  type: integer
-                  example: 80
-                city:
-                  type: string
-                  example: თბილისი
                 experiences:
                   type: array
                   items:
@@ -119,29 +91,15 @@ paths:
                 about_me:
                   type: text
                   example: ეს არის აღწერა ჩემს შესახებ
-                skills:
-                  type: string
-                  example: ხატვა, ძერწვა
-                english_lang:
-                  type: integer
-                  example: 4
-                georgian_lang:
-                  type: integer
-                  example: 5
               required:
                 - token
                 - name
                 - surname
                 - email
                 - phone_number
-                - country_id
                 - image
-                - city
                 - experiences
                 - educations
-                - skills
-                - english_lang
-                - georgian_lang
 
           application/json:
             schema:
@@ -162,12 +120,6 @@ paths:
                 phone_number:
                   type: string
                   example: +995598123456
-                country_id:
-                  type: integer
-                  example: 80
-                city:
-                  type: string
-                  example: თბილისი
                 experiences:
                   type: array
                   items:
@@ -212,29 +164,16 @@ paths:
                 about_me:
                   type: text
                   example: ეს არის აღწერა ჩემს შესახებ
-                skills:
-                  type: string
-                  example: ხატვა, ძერწვა
-                english_lang:
-                  type: integer
-                  example: 4
-                georgian_lang:
-                  type: integer
-                  example: 5
+
               required:
                 - token
                 - name
                 - surname
                 - email
                 - phone_number
-                - country_id
                 - image
-                - city
                 - experiences
                 - educations
-                - skills
-                - english_lang
-                - georgian_lang
       responses:
         "201":
           description: A JSON array of user names

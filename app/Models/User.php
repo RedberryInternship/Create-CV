@@ -28,11 +28,6 @@ class User extends Authenticatable
 		return $this->belongsTo(Token::class);
 	}
 
-	public function country()
-	{
-		return $this->belongsTo(Country::class);
-	}
-
 	public function experiences()
 	{
 		return $this->belongsToMany(Experience::class, 'user_experiences', 'user_id', 'experience_id');
