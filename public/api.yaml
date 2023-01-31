@@ -13,6 +13,8 @@ servers:
 paths:
   /degrees:
     get:
+      tags:
+        - Education
       summary: Returns a list of degrees.
       responses:
         "200":
@@ -24,6 +26,8 @@ paths:
 
   /cvs:
     post:
+      tags:
+        - CV
       summary: Stores data.
       requestBody:
         description: Create a new contact organization
@@ -186,6 +190,8 @@ paths:
 
   /cvs/{token}:
     get:
+      tags:
+        - CV
       summary: Returns a list of cvs.
       parameters:
         - name: "token"
@@ -203,6 +209,8 @@ paths:
 
   /cv/{token}/{id}:
     get:
+      tags:
+        - CV
       summary: Returns a specifix cv.
       parameters:
         - name: "token"
