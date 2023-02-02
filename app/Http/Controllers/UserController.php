@@ -28,7 +28,7 @@ class UserController extends Controller
 
 	public function store(StoreUserRequest $request): JsonResponse
 	{
-		$data = DB::transaction(
+		$user = DB::transaction(
 			function () use ($request) {
 				$token = Token::where('token', $request->token)->first();
 				$image = $request->file('image')->store('images');
@@ -71,9 +71,9 @@ class UserController extends Controller
 					]);
 				}
 
-				return ['message' => 'Information recorded'];
+				return $user;
 			}
 		);
-		return response()->json($data, 201);
+		return response()->json(UserResource::make($user), 201);
 	}
 }

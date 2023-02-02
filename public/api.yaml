@@ -184,49 +184,4 @@ paths:
           content:
             application/json:
               schema:
-                type: object
-              example:
-                message: Information recorded
-
-  /cvs/{token}:
-    get:
-      tags:
-        - CV
-      summary: Returns a list of cvs.
-      parameters:
-        - name: "token"
-          in: "path"
-          description: "unique token chosen for your user"
-          required: true
-          type: "string"
-      responses:
-        "200":
-          description: A JSON array of user names
-          content:
-            application/json:
-              schema:
                 $ref: "../swagger/examples/cvs.yaml#/components/schemas"
-
-  /cv/{token}/{id}:
-    get:
-      tags:
-        - CV
-      summary: Returns a specifix cv.
-      parameters:
-        - name: "token"
-          in: "path"
-          description: "token"
-          required: true
-          type: "string"
-        - name: "id"
-          in: "path"
-          description: "id of the cv"
-          required: true
-          type: "string"
-      responses:
-        "200":
-          description: A JSON array of user names
-          content:
-            application/json:
-              schema:
-                $ref: "../swagger/examples/cv.yaml#/components/schemas"
