@@ -81,7 +81,7 @@ paths:
                         example: თსუ
                       degree_id:
                         type: integer
-                        example: 13
+                        example: 7
                       due_date:
                         type: date
                         example: 2017/06/25
@@ -154,7 +154,7 @@ paths:
                         example: თსუ
                       degree_id:
                         type: integer
-                        example: 13
+                        example: 7
                       due_date:
                         type: date
                         example: 2017/06/25

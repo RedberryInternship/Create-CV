@@ -19,7 +19,7 @@ components:
               orci bibendum.
         educations:
           - institute: თსუ
-            degree_id: 13
+            degree: სტუდენტი
             due_date: 2017/06/25
             description:
               სამართლის ფაკულტეტის მიზანი იყო მიგვეღო ფართო თეორიული ცოდნა სამართლის
