@@ -23,11 +23,6 @@ class User extends Authenticatable
 	 */
 	protected $guarded = ['id'];
 
-	public function token()
-	{
-		return $this->belongsTo(Token::class);
-	}
-
 	public function experiences()
 	{
 		return $this->belongsToMany(Experience::class, 'user_experiences', 'user_id', 'experience_id');

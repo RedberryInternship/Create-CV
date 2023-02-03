@@ -30,15 +30,12 @@ paths:
         - CV
       summary: Stores data.
       requestBody:
-        description: Create a new contact organization
+        description: Create a new cv
         content:
           multipart/form-data:
             schema:
               type: object
               properties:
-                token:
-                  type: string
-                  example: 6d527477c2e405a686d8426964940876
                 name:
                   type: string
                   example: დავით
@@ -96,7 +93,6 @@ paths:
                   type: text
                   example: ეს არის აღწერა ჩემს შესახებ
               required:
-                - token
                 - name
                 - surname
                 - email
@@ -109,9 +105,6 @@ paths:
             schema:
               type: object
               properties:
-                token:
-                  type: string
-                  example: 6d527477c2e405a686d8426964940876
                 name:
                   type: string
                   example: დავით
@@ -170,7 +163,6 @@ paths:
                   example: ეს არის აღწერა ჩემს შესახებ
 
               required:
-                - token
                 - name
                 - surname
                 - email

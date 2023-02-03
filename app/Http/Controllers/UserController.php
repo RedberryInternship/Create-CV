@@ -30,11 +30,9 @@ class UserController extends Controller
 	{
 		$user = DB::transaction(
 			function () use ($request) {
-				$token = Token::where('token', $request->token)->first();
 				$image = $request->file('image')->store('images');
 				$user = User::create([
 					'image'                    => '/storage/' . $image,
-					'token_id'                 => $token->id,
 					'name'                     => $request->name,
 					'surname'                  => $request->surname,
 					'email'                    => $request->email,
